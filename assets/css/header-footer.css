@@ -1,0 +1,12 @@
+/* Header css start */
+header.header { background: transparent; position: fixed; top: 0; left: 0; width: 100%; padding: 20px 0; z-index: 10;}
+header.header nav.navbar { align-items: center; }
+header.header .navbar-nav{margin: 0 auto;}
+header.header .navbar-nav li a {color: #fff;padding: 0 !important; transition: var(--primary-transition);}
+header.header .navbar-nav li + li { margin-left: 60px; }
+header.header .navbar-nav li a:hover { color: var(--tertiary_color); }
+header.header .navbar-nav li a.active { color: var(--tertiary_color); }
+header.header .right-part .btn-wrapper { display: flex; align-items: center; gap: 35px; }
+
+
+/* Header css end */
