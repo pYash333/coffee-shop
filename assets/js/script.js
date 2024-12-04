@@ -6,4 +6,7 @@ $(document).ready(function () {
             $('header.header').removeClass('fixed');
         }
     });
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        $("header.header .right-part .button-1").appendTo("header.header .navbar-nav");
+    }
 });

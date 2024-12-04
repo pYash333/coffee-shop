@@ -4,6 +4,7 @@
     --primary_color: #603809;
     --secondary_color: #1E1E1E;
     --tertiary_color: #F9C06A;
+    --quarternary_color: #FFF9F1;
     --body_color: #707070;
     --primary-transition: 400ms;
     --body_font: "Playfair Display", serif;
@@ -15,15 +16,15 @@
 body{font-family:var(--heading_font); font-weight:400; color:var(--body_color); font-size:20px; line-height:34px;}
 a{text-decoration: none; transition: var(--primary-transition);display: inline-block;}
 
-.button-1 a { padding: 14px 25px; font-weight: 700; color: var(--secondary_color); background: var(--tertiary_color); border-radius: 50px; }
-.button-1 a:hover { background-color: var(--primary_color); color: #fff; }
+.button-1 a { padding: 14px 25px; font-weight: 700; color: var(--secondary_color); background: var(--tertiary_color); border-radius: 50px; border: 1px solid var(--tertiary_color); }
+.button-1 a:hover { background-color: var(--primary_color); color: #fff; border: 1px solid var(--tertiary_color);}
 .link-text a { color: #fff; }
 .link-text a:hover { color: var(--tertiary_color); }
 
 h1,h2,h3,h4,h5,h6{margin-top:0px; font-weight:400; margin-bottom:15px; color: var(--primary_color); line-height: normal; }
 h1 { font-size:220px; font-family:var(--secondary_font);}
 h2 { font-size:54px; font-weight: 700;}
-h3 { font-size:28px;}
+h3 { font-size:28px; font-weight: 700;}
 h4 { font-size:26px;}
 h5 { font-size:22px;font-weight: 700;}
 h6 { font-size:20px; }
@@ -36,6 +37,8 @@ h6 { font-size:20px; }
 .white-text h5,
 .white-text h6{color:#fff;}
 
+.container{padding: 0 15px;}
+/* .cta-section, .comparision-section, .coffee-style-section, .discover-section{display: none;} */
 /* Hero section css start */
 .hero { height: 100vh; position: relative;}
 .hero:before { max-width: 768px; width: 100%; height: 100%; position: absolute; content: '';top: 0;left: 0;background: linear-gradient(to right, #1e1e1e 0%,rgb(from #000000 r g b / 0%) 100%);}
@@ -48,6 +51,7 @@ h6 { font-size:20px; }
 /* Hero section css end */
 
 /* Discover section css Start */
+
 .discover-section { padding: 80px 0; }
 .discover-section .inner { display: flex; align-items: center; }
 .discover-section .inner .left { width: calc(100% - 500px); padding-right: 70px; }
@@ -58,6 +62,8 @@ h6 { font-size:20px; }
 /* Discover section css end */
 
 
+/* Coffee style section css start */
+
 .coffee-style-section { padding: 80px 0; }
 .coffee-style-section .title-part .content { margin-top: 20px; }
 .coffee-style-section .section-row { display: flex; flex-wrap: wrap; margin: 32px -16px 0; }
@@ -65,12 +71,41 @@ h6 { font-size:20px; }
 .coffee-style-section .style-card .card-inner{border: 1px solid rgb(from var(--tertiary_color) r g b / 20%);}
 .coffee-style-section .style-card .image { height: 220px; } 
 .coffee-style-section .style-card .image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.coffee-style-section .style-card .card-content-wrapper { padding: 15px 15px 0; background-color: #FFF9F1}
+.coffee-style-section .style-card .card-content-wrapper { padding: 15px 15px 0; background-color: var(--quarternary_color);}
 .coffee-style-section .style-card h5 { margin: 0; }
 .coffee-style-section .style-card .text { margin-top: 6px; font-size: 16px; line-height: normal; color: var(--secondary_color);}
 .coffee-style-section .style-card .price { font-size: 18px; font-weight: 700; margin-top: 6px; line-height: normal; color: var(--secondary_color);}
 .coffee-style-section .style-card  .button-1 { margin-top: 20px; transform: translateY(24px); transition: var(--primary-transition);}
 .coffee-style-section .style-card:hover .button-1{transform: translateY(15px);}
+/* Coffee style section end */
+
+
+/* Comperition section css start */
+
+.comparision-section { padding: 60px 0 80px; }
+.comparision-section .section-row { margin: 32px -10px 0; display: flex; flex-wrap: wrap; }
+.comparision-section .section-row .card-col { padding: 0 10px; width: 25%; }
+.comparision-section .section-row .card-box { padding: 36px 30px; background: var(--quarternary_color); height: 100%; border: 1px solid rgb(from var(--tertiary_color) r g b / 50%);transition: var(--primary-transition);}
+.comparision-section .section-row .card-box:hover{background-color: rgb(from var(--tertiary_color) r g b / 50%);}
+.comparision-section .card-box .card-content { margin-top: 25px; }
+.comparision-section .card-box .card-content h3 { margin-bottom: 8px; }
+.comparision-section .bottom-box { margin-top: 32px; }
+/* Comperition section css end */
+
+/* CTA section css start */
+.cta-section { padding: 50px 0;  position: relative;}
+.cta-section .inner { position: relative; z-index: 2; }
+.cta-section  .left { width: calc(100% - 300px); }
+.cta-section .inner { display: flex; align-items: center; }
+.cta-section .left .content { max-width: 400px; width: 100%; }
+.cta-section .left .button-1 { margin-top: 24px; }
+.cta-section .right { width: 300px; }
+
+.cta-section::before { position: absolute; content: ''; inset: 0; background: url(../images/coffeecup-bg.jpg) no-repeat center / cover; z-index: -1; }
+.cta-section:after { position: absolute; content: ''; inset: 0; background: rgb(from var(--primary_color) r g b / 70%); z-index: 0; }
+
+/* CTA section css end */
+
 /* CSS end  here */
 
 @media (min-width:576px) { .container{max-width:unset;} }

@@ -3,11 +3,31 @@ header.header { background: transparent; position: fixed; top: 0; left: 0; width
 header.header.fixed{background-color: var(--primary_color);transition: var(--primary-transition);}
 header.header nav.navbar { align-items: center; }
 header.header .navbar-nav{margin: 0 auto;}
+header.header nav.navbar .navbar-toggler { width: 40px; padding: 0;  box-shadow: none; outline: none; border: none;}
 header.header .navbar-nav li a {color: #fff;padding: 0 !important; transition: var(--primary-transition);}
 header.header .navbar-nav li + li { margin-left: 60px; }
 header.header .navbar-nav li a:hover { color: var(--tertiary_color); }
 header.header .navbar-nav li a.active { color: var(--tertiary_color); }
 header.header .right-part .btn-wrapper { display: flex; align-items: center; gap: 35px; }
 
+@media (max-width:1200px){
+
+    header.header .navbar-nav li + li { margin-left: 40px; }
+}
+@media (max-width:991px){
+    header.header { background: var(--primary_color); }
+    header.header .container { width: 100%; }
+    header.header .navbar-collapse { background: var(--primary_color); position: absolute; top: 100px; left: 0; width: 100%; padding: 0 16px 20px; max-height: 100vh; overflow-y: auto; transition-timing-function: linear;}
+    header.header .navbar-nav li + li { margin: 10px 0 0; }
+    header.header .right-part{ margin-left: auto;margin-right: 20px;}
+    
+    
+}
+@media (max-width:767px){
+    header.header .navbar-collapse{top: 80px;}
+    header.header .navbar-collapse .button-1{margin-top: 15px;}
+}
 
 /* Header css end */
+
+
