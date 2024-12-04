@@ -22,10 +22,10 @@ a{text-decoration: none; transition: var(--primary-transition);display: inline-b
 
 h1,h2,h3,h4,h5,h6{margin-top:0px; font-weight:400; margin-bottom:15px; color: var(--primary_color); line-height: normal; }
 h1 { font-size:220px; font-family:var(--secondary_font);}
-h2 { font-size:54px;}
+h2 { font-size:54px; font-weight: 700;}
 h3 { font-size:28px;}
 h4 { font-size:26px;}
-h5 { font-size:22px;}
+h5 { font-size:22px;font-weight: 700;}
 h6 { font-size:20px; }
 
 .white-text,
@@ -47,6 +47,30 @@ h6 { font-size:20px; }
 .hero .button-1{margin-top: 20px;}
 /* Hero section css end */
 
+/* Discover section css Start */
+.discover-section { padding: 80px 0; }
+.discover-section .inner { display: flex; align-items: center; }
+.discover-section .inner .left { width: calc(100% - 500px); padding-right: 70px; }
+.discover-section .inner .left .content { margin-top: 30px; }
+.discover-section .inner .left .button-1 { margin-top: 30px; }
+.discover-section .inner  .right { width: 500px; }
+.discover-section .inner .right .image { display: flex; justify-content: center; align-items: center; }
+/* Discover section css end */
+
+
+.coffee-style-section { padding: 80px 0; }
+.coffee-style-section .title-part .content { margin-top: 20px; }
+.coffee-style-section .section-row { display: flex; flex-wrap: wrap; margin: 32px -16px 0; }
+.coffee-style-section .style-card { padding: 0 16px; width: 25%; }
+.coffee-style-section .style-card .card-inner{border: 1px solid rgb(from var(--tertiary_color) r g b / 20%);}
+.coffee-style-section .style-card .image { height: 220px; } 
+.coffee-style-section .style-card .image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.coffee-style-section .style-card .card-content-wrapper { padding: 15px 15px 0; background-color: #FFF9F1}
+.coffee-style-section .style-card h5 { margin: 0; }
+.coffee-style-section .style-card .text { margin-top: 6px; font-size: 16px; line-height: normal; color: var(--secondary_color);}
+.coffee-style-section .style-card .price { font-size: 18px; font-weight: 700; margin-top: 6px; line-height: normal; color: var(--secondary_color);}
+.coffee-style-section .style-card  .button-1 { margin-top: 20px; transform: translateY(24px); transition: var(--primary-transition);}
+.coffee-style-section .style-card:hover .button-1{transform: translateY(15px);}
 /* CSS end  here */
 
 @media (min-width:576px) { .container{max-width:unset;} }

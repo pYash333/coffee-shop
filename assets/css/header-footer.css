@@ -1,5 +1,6 @@
 /* Header css start */
 header.header { background: transparent; position: fixed; top: 0; left: 0; width: 100%; padding: 20px 0; z-index: 10;}
+header.header.fixed{background-color: var(--primary_color);transition: var(--primary-transition);}
 header.header nav.navbar { align-items: center; }
 header.header .navbar-nav{margin: 0 auto;}
 header.header .navbar-nav li a {color: #fff;padding: 0 !important; transition: var(--primary-transition);}
