@@ -38,12 +38,25 @@ h6 { font-size:20px; }
 .white-text h6{color:#fff;}
 
 .container{padding: 0 15px;}
-/* .cta-section, .comparision-section, .coffee-style-section, .discover-section{display: none;} */
+/* Slick - 1.8.1 */
+.slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-loading .slick-track{visibility:hidden}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-loading .slick-slide{visibility:hidden}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}
+
+/* Slick css */
+.slick-slider .slick-arrow{background:url(https://497316.fs1.hubspotusercontent-na1.net/hubfs/497316/theme-ritter-communication/side_arrow.png) no-repeat center; border:none; z-index:5; position:absolute; top:50%; left:0; width:67px; height:67px; font-size:0px; color:#fff; transition: var(--primary-transition); cursor:pointer;}
+.slick-slider .slick-arrow.slick-next{left:auto; right:0;transform:scale(-1) translateY(50%);}
+
+.slick-slider .slick-dots{text-align:center; padding:0; margin:10px auto 0;}
+.slick-slider .slick-dots li{display:inline-block; margin:0 10px;}
+.slick-slider .slick-dots li button{width:16px; height:16px; border-radius:100%; background-color:transparent; border: 2px solid var(--primary_color); padding:0; text-indent:-9999px; cursor:pointer; transition: var(--primary-transition);} 
+.slick-slider .slick-dots li.slick-active button{background-color:var(--primary_color);}
+
+
+.cta-section{display: none;}
 /* Hero section css start */
 
 .shape { position: relative; }
-.shape .left { position: absolute; top: -170px; left: 0; transform: scaleX(-1); }
-.shape .right { position: absolute; bottom: -140px; right: 0; }
+.shape .left { position: absolute; top: -170px; left: 0; transform: scaleX(-1); z-index: -1;}
+.shape .right { position: absolute; bottom: -140px; right: 0; z-index: -1;}
 .hero { height: 100vh; position: relative;}
 .hero:before { max-width: 768px; width: 100%; height: 100%; position: absolute; content: '';top: 0;left: 0;background: linear-gradient(to right, #1e1e1e 0%,rgb(from #000000 r g b / 0%) 100%);}
 
@@ -68,9 +81,9 @@ h6 { font-size:20px; }
 
 /* Coffee style section css start */
 
-.coffee-style-section { padding: 80px 0; }
+.coffee-style-section { padding: 80px 0; overflow-x: clip;}
 .coffee-style-section .title-part .content { margin-top: 20px; }
-.coffee-style-section .section-row { display: flex; flex-wrap: wrap; margin: 32px -16px 0; }
+.coffee-style-section .section-row { display: flex; flex-wrap: wrap; margin: 32px -16px 0; row-gap: 50px;}
 .coffee-style-section .style-card { padding: 0 16px; width: 25%; }
 .coffee-style-section .style-card .card-inner{border: 1px solid rgb(from var(--tertiary_color) r g b / 20%);}
 .coffee-style-section .style-card .image { height: 220px; } 
@@ -81,13 +94,14 @@ h6 { font-size:20px; }
 .coffee-style-section .style-card .price { font-size: 18px; font-weight: 700; margin-top: 6px; line-height: normal; color: var(--secondary_color);}
 .coffee-style-section .style-card  .button-1 { margin-top: 20px; transform: translateY(24px); transition: var(--primary-transition);}
 .coffee-style-section .style-card:hover .button-1{transform: translateY(15px);}
+.coffee-style-section .slick-slider .slick-dots{margin: -20px auto 0;}
 /* Coffee style section end */
 
 
 /* Comperition section css start */
 
 .comparision-section { padding: 60px 0 80px; }
-.comparision-section .section-row { margin: 32px -10px 0; display: flex; flex-wrap: wrap; }
+.comparision-section .section-row { margin: 32px -10px 0; display: flex; flex-wrap: wrap; row-gap: 30px; }
 .comparision-section .section-row .card-col { padding: 0 10px; width: 25%; }
 .comparision-section .section-row .card-box { padding: 36px 30px; background: var(--quarternary_color); height: 100%; border: 1px solid rgb(from var(--tertiary_color) r g b / 50%);transition: var(--primary-transition);}
 .comparision-section .section-row .card-box:hover{background-color: rgb(from var(--tertiary_color) r g b / 50%);}
@@ -121,6 +135,36 @@ h6 { font-size:20px; }
 
 @media (max-width:1629px){}
 @media (max-width:1429px){}
-@media (max-width:1199px){}
-@media (max-width:991px){}
-@media (max-width:767px){}
+@media (max-width:1199px){
+    .coffee-style-section .style-card { width: 33.33%; }
+    .shape .left { width: 200px; }
+    .shape .right { width: 200px; }
+    .comparision-section .section-row .card-col { width: 33.33%; }
+}
+@media (max-width:991px){
+    main.main{ margin-top: 120px;}
+    h1 {font-size: 120px;}
+    .hero { height: 620px; }
+    .discover-section { padding: 60px 0; }
+    .discover-section .inner {flex-direction: column-reverse;text-align: center;}
+    .discover-section .inner .left { width: 100%; padding: 0; margin-top: 20px;}
+    .discover-section .inner .right { max-width: 490px; width: 100%; margin-top: 30px;}
+    .shape .right {bottom: -70px;}
+    .coffee-style-section .style-card { width: 50%; }
+    .coffee-style-section .style-card .image { height: 280px; }
+    .comparision-section .section-row .card-col { width: 50%; }
+
+}
+@media (max-width:767px){
+    h2 { font-size: 42px; }
+    main.main {margin-top: 100px;}
+    .coffee-style-section .style-card .card-inner { margin-bottom: 40px; }
+    .comparision-section .section-row .card-box .image img { margin: 0 auto; }
+}
+
+@media (max-width:575px){
+    h2 { font-size: 34px; }
+    .discover-section .inner .right .image { max-width: 320px; margin: 0 auto;}
+    .coffee-style-section { padding: 60px 0; }
+    .coffee-style-section .section-row { max-width: 400px; width: 100%; margin: 0 auto;}
+}
